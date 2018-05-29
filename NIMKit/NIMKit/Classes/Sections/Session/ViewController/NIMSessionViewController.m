@@ -110,6 +110,7 @@
 {
     if ([self shouldShowInputView])
     {
+        //这是孙改的代码，这个SB
         self.sessionInputView = [[NIMInputView alloc] initWithFrame:CGRectMake(0, 0, self.view.nim_width,0) config:self.sessionConfig];
         self.sessionInputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         [self.sessionInputView setSession:self.session];
