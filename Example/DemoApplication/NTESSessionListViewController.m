@@ -31,6 +31,13 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+-(void)onDeleteRecentAtIndexPath:(NIMRecentSession *)recent atIndexPath:(NSIndexPath *)indexPath{
+    [super onDeleteRecentAtIndexPath:recent atIndexPath:indexPath];
+    [super refresh];
+    [self refresh];
+    [self.tableView reloadData];
+}
+
 - (void)addSession
 {
     NTESContactViewController *vc = [[NTESContactViewController alloc] initWithNibName:nil bundle:nil];
